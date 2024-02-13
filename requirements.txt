@@ -1,0 +1,38 @@
+Credenciales de mail:
+
+Email:
+Crear y configurar una cuenta en https://www.emailjs.com/ con un correo de BigFood.
+Cambiar variables de entorno por credenciales de cuenta, servicio y template de BigFood.
+Diseñar y desarrollar template de mail de respuesta automatica.
+Diseñar y desarrollar template de mail de consulta (el que recibe bigfood).
+
+Font family
+Mejorar calidad de logos
+CEO: keywords
+
+Contacto y reservas:
+Indicar un maximo de caracteres y validación de caracteres especiales para el mensaje libre
+Indicar que horario deshabilitar para input de fecha y hora de reserva
+Indicar un maximo de comenzales
+
+Historia:
+Falta contenido
+
+Platos:
+Falta contenido
+sugerencia: cambiar esta sección por Menú digital
+
+El café 
+Falta contenido
+sugerencia: esta sección se puede cubrir con la vista "historia"
+
+Fotos
+Faltan imagenes
+sugerencias: 
+- Agregar carousel con testimonios
+- Agregar fotos familiares, eventos, fiestas
+
+Sugerencias generales:
+Borrar fecha del Copyright
+
+
