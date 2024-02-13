@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'tailwindcss/base';
+
+* {
+  z-index: 100;
+  /* color: #1b1f23; */
+}
+.med-z {
+  z-index: 50;
+}
+.min-z {
+  z-index: 1;
+}
+
+body {
+  @apply min-h-screen;
+  @apply text-[#1b1f23];
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input:focus {
+  outline: none;
+  border: none;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.tooltip {
+  position: relative;
+  bottom: -50px;
+  opacity: 0;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+  /* ver si usar auto-fit que hace que se estire para llenar todo el espacio,
+  tambien se puede usar max() para indicar un tamaño maximo */
+  grid-auto-flow: dense;
+}
+
+.featured { /* es para mi elemento mas grande (ocupa 3 columnas)*/
+  grid-column: span 3;
+}
+
+@keyframes aparecer {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation-name: aparecer;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; 
+}
+
+.custom_separator {
+  background-color: #9b0e2c;
+  /* height: 1px; */
+  margin: 0 auto;
+  /* width: 100%; */
+}
+
+.btn_custom-submit {
+  background-color: #004066 !important;
+  border-radius: 2em;
+  padding-left: 3rem; /* 48px */
+  padding-right: 3rem; /* 48px */
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+  color: #ccc;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+.btn_custom-submit:disabled {
+  background-color: #004066 !important;
+  opacity: .5;
+  border-radius: 2em;
+  padding-left: 3rem; /* 48px */
+  padding-right: 3rem; /* 48px */
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+  color: #ccc;
+  letter-spacing: 0.2em;
+  cursor: not-allowed;
+}
+
+/* closure */
+.animation-ctn{
+  text-align:center;
+  margin-top:2em;
+}
+
+	@-webkit-keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 200px
+    }
+}
+
+@-ms-keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 200px
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 0px
+    }
+}
+
+@-webkit-keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 480px
+   
+    }
+
+    100% {
+        stroke-dashoffset: 960px;
+      
+    }
+}
+
+@-ms-keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 240px
+    }
+
+    100% {
+        stroke-dashoffset: 480px
+    }
+}
+
+@keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 480px 
+    }
+
+    100% {
+        stroke-dashoffset: 960px
+    }
+}
+
+@keyframes colored-circle { 
+    0% {
+        opacity:0
+    }
+
+    100% {
+        opacity:100
+    }
+}
+
+.inlinesvg .svg svg {
+    display: inline
+}
+
+
+.icon--order-success svg polyline {
+    -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+    animation: checkmark 0.25s ease-in-out 0.7s backwards
+}
+
+.icon--order-success svg circle {
+    -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+    animation: checkmark-circle 0.6s ease-in-out backwards;
+}
+.icon--order-success svg circle#colored {
+    -webkit-animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+    animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+}
+/* closure end */
